@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "Karla-Regular";
+  src: url("../../assets/fonts/Karla/Karla-Regular.ttf");
+}
+@font-face {
+  font-family: "Karla-Medium";
+  src: url("../../assets/fonts/Karla/Karla-Medium.ttf");
+}
+@font-face {
+  font-family: "Karla-Bold";
+  src: url("../../assets/fonts/Karla/Karla-Bold.ttf");
+}
+@font-face {
+  font-family: "FSRenaissance-Regular";
+  src: url("../../assets/fonts/FS.Renaissance/FSRenaissance-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla-Regular";
+}
 
+.navbar .collapse .navbar-brand img {
+  max-width: 200px;
+}
 
 /*# sourceMappingURL=style.css.map */
