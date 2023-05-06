@@ -1,0 +1,13 @@
+<svg id="Group_8619" data-name="Group 8619" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.5" height="19.5" viewBox="0 0 19.5 19.5">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1331" data-name="Rectangle 1331" width="19.5" height="19.5" fill="none" stroke="#a4171d" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_8618" data-name="Group 8618" clip-path="url(#clip-path)">
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="3.375" cy="3.375" r="3.375" transform="translate(4.125 0.75)" fill="none" stroke="#a4171d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_9252" data-name="Path 9252" d="M.75,18.75V15.375a4.5,4.5,0,0,1,4.5-4.5h4.5" fill="none" stroke="#a4171d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="Ellipse_7" data-name="Ellipse 7" cx="3.375" cy="3.375" r="3.375" transform="translate(12 12)" fill="none" stroke="#a4171d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_330" data-name="Line 330" x1="4.77" y2="4.77" transform="translate(12.99 12.99)" fill="none" stroke="#a4171d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

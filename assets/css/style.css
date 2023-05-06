@@ -6,14 +6,6 @@
   font-family: "Karla-Medium";
   src: url("../../assets/fonts/Karla/Karla-Medium.ttf");
 }
-@font-face {
-  font-family: "Karla-Bold";
-  src: url("../../assets/fonts/Karla/Karla-Bold.ttf");
-}
-@font-face {
-  font-family: "FSRenaissance-Regular";
-  src: url("../../assets/fonts/FS.Renaissance/FSRenaissance-Regular.ttf");
-}
 * {
   padding: 0;
   margin: 0;
@@ -21,8 +13,363 @@
   font-family: "Karla-Regular";
 }
 
-.navbar .collapse .navbar-brand img {
-  max-width: 200px;
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 50px;
+  flex-wrap: wrap;
+}
+nav .navbar .navbar-items ul {
+  display: flex;
+  list-style-type: none;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+nav .navbar .navbar-items ul li a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  transition: 0.6s;
+}
+nav .navbar .navbar-items ul li a:hover {
+  border-bottom: 4px solid #9E1620;
+  transition: 0.4s;
+}
+nav .navbar .navbar-right-items {
+  display: flex;
+  align-items: center;
+}
+nav .navbar .navbar-right-items span {
+  padding-right: 69px;
+  font-size: 22px;
+}
+nav .navbar .navbar-right-items .navbar-cart-icon {
+  background-color: #9E1620;
+  width: 80px;
+  min-height: 80px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.page-background {
+  background-color: #F8F7F2;
+  margin-inline: 210px;
+  padding: 87px 130px;
+  margin-top: 116px;
+}
+.page-background .header-section-title {
+  padding-bottom: 53px;
+}
+.page-background .header-section-title h1, .page-background .header-section-title h4 {
+  color: #967F2F;
+}
+.page-background .header-section-title h1 {
+  font-size: 80px;
+}
+.page-background .header-section-title h4 {
+  font-size: 28px;
+  padding: 20px 0px;
+}
+.page-background .header-section-title h6 {
+  font-size: 24px;
+}
+.page-background .header-section .header-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-background .header-section .header-container .header-column {
+  flex: 1;
+}
+.page-background .header-section .header-container .header-column .header-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-img {
+  background-image: url("../images/header-image.png");
+  min-height: 310px;
+  width: 350px;
+  background-repeat: no-repeat;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-img .header-bottom-cards {
+  padding: 120px 24px 0px 24px !important;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content {
+  padding: 174px 24px 0px 24px;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-text {
+  color: white;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-text p {
+  font-size: 13px;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-text h2 {
+  font-size: 45px;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-input {
+  text-align: right;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-input input {
+  width: 48px;
+  height: 48px;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-content {
+  max-width: 350px;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-content .pricing-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 37px 0px 23px 0px;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-content .pricing-content .pricing {
+  font-size: 40px;
+  color: black;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-content .bottom-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+.page-background .header-section .header-container .header-column .header-card .header-card-content .bottom-content .content-icon {
+  width: 45px;
+}
+.page-background .quantity-section {
+  padding-top: 140px;
+}
+.page-background .quantity-section .quantity-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 148px;
+}
+.page-background .quantity-section .quantity-container .quantity-column {
+  max-width: 50%;
+}
+.page-background .quantity-section .quantity-container .quantity-column .quantity-left-content p {
+  padding-top: 10px;
+}
+.page-background .quantity-section .quantity-container .quantity-column .quantity-left-content .quantity-counter-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 90px;
+}
+.page-background .quantity-section .quantity-container .quantity-column .quantity-left-content .quantity-counter-container .quantity-counter {
+  width: 159px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 40px;
+  font-size: 22px;
+}
+.page-background .quantity-section .quantity-container .quantity-column .quantity-left-content .quantity-counter-container .quantity-counter button {
+  all: unset;
+  cursor: pointer;
+}
+.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form {
+  display: flex;
+  gap: 22px;
+  margin-top: 14px;
+}
+.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form select:focus, .page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form input:focus {
+  outline: none;
+}
+.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form select {
+  height: 60px;
+  width: 268px;
+  border: none;
+  padding-inline: 20px;
+  font-size: 20px;
+}
+.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form input {
+  height: 60px;
+  width: 79px;
+  border: none;
+  padding-inline: 20px;
+  font-size: 20px;
+}
+.page-background .schedule-section {
+  padding-top: 73px;
+}
+.page-background .schedule-section .schedule-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-background .schedule-section .schedule-container .schedule {
+  flex-basis: 35%;
+}
+.page-background .schedule-section .schedule-container .schedule .monthly-schedule, .page-background .schedule-section .schedule-container .schedule .schedule-form {
+  margin-top: 19px;
+}
+.page-background .schedule-section .schedule-container .schedule .schedule-form {
+  max-width: 338px;
+  background: white;
+  padding: 30px;
+}
+.page-background .schedule-section .schedule-container .schedule .schedule-form form {
+  margin-top: 15px;
+}
+.page-background .schedule-section .schedule-container .schedule .schedule-form form .inside-form {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 9px;
+}
+.page-background .schedule-section .schedule-container .schedule .schedule-form form input {
+  width: 50px;
+  height: 50px;
+}
+.page-background .schedule-section .schedule-container .schedule .schedule-form form label {
+  font-size: 22px;
+}
+.page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 {
+  max-width: 588px;
+}
+.page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 form {
+  display: flex;
+  gap: 137px;
+}
+.page-background .workshop-section {
+  padding-top: 103px;
+  padding-bottom: 200px;
+}
+.page-background .workshop-section .workshop-title {
+  padding-bottom: 29px;
+}
+.page-background .workshop-section .workshop-title h1 {
+  font-size: 28px;
+  letter-spacing: 5.4px;
+  color: #967F2F;
+}
+.page-background .workshop-section .workshop-title h2 {
+  font-size: 24px;
+  padding-top: 25px;
+}
+.page-background .workshop-section .workshop-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.page-background .workshop-section .workshop-container .workshop {
+  flex-basis: 23%;
+}
+.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-date {
+  background: #9E1620;
+  color: white;
+}
+.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-date p {
+  font-size: 24px;
+  padding: 10px 0px 10px 23px;
+}
+.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body {
+  background-color: white;
+  padding: 10px 23px 10px 23px;
+}
+.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .main-content p {
+  font-size: 12px;
+}
+.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .main-content h1 {
+  font-size: 36px;
+}
+.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 21px 0px;
+}
+.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content .bottom-content-inside .bottom-content-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 10px;
+}
+.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content input {
+  width: 50px;
+  height: 50px;
+}
+.page-background .workshop-section .workshop-btn a {
+  text-decoration: none;
+  background: #9E1620;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 425px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 29px;
+  font-size: 18px;
+  color: white;
+  text-align: right;
+  margin: 80px 0 0 auto;
+}
+
+footer {
+  margin-top: 88px;
+  background-color: #F8F7F2;
+  padding: 0px 210px;
+}
+footer .footer-contact {
+  padding-top: 98px;
+  font-size: 28px;
+}
+footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .footer-container .footer-items {
+  flex-basis: 24%;
+}
+footer .footer-container .footer-items h1 {
+  padding-bottom: 36px;
+  padding-top: 73px;
+}
+footer .footer-container .footer-items ul {
+  list-style-type: none;
+}
+footer .footer-container .footer-items ul li {
+  padding-bottom: 14px;
+}
+footer .footer-container .footer-items ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+footer .footer-bottom-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 104px;
+  gap: 12px;
+}
+footer .footer-bottom-container .footer-bottom-items {
+  flex-basis: 23%;
+}
+footer .footer-bottom-container .footer-bottom-items div {
+  font-size: 20px;
+}
+footer .footer-bottom-container .footer-bottom-items h2 {
+  padding-bottom: 14px;
+  font-size: 22px;
+}
+footer .footer-bottom-container .footer-bottom-items .footer-social-icons {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  font-size: 30px;
+}
+footer .footer-bottom-container .footer-bottom-items .footer-social-icons li a {
+  color: black;
+}
+footer .bottom-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 66px;
+  padding-top: 64px;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
