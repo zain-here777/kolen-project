@@ -1,6 +1,27 @@
 @import "variables";
 @import "fonts";
 
+// Mixins //
+
+@mixin standard-btn{
+  a {
+    text-decoration: none;
+    background: $maroon;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 425px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 29px;
+    font-size: 18px;
+    color: white;
+    text-align: right;
+    margin: 80px 0 0 auto;
+  }
+}
+
+
 * {
   padding: 0;
   margin: 0;
@@ -376,21 +397,7 @@ nav {
     }
 
     .workshop-btn {
-      a {
-        text-decoration: none;
-        background: $maroon;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        max-width: 425px;
-        justify-content: center;
-        padding: 20px;
-        border-radius: 29px;
-        font-size: 18px;
-        color: white;
-        text-align: right;
-        margin: 80px 0 0 auto;
-      }
+      @include standard-btn();
     }
   }
 }
@@ -442,7 +449,8 @@ footer {
 
     .footer-bottom-items {
       flex-basis: 23%;
-      div{
+
+      div {
         font-size: 20px;
       }
 
@@ -465,12 +473,354 @@ footer {
       }
     }
   }
-  .bottom-logo{
+
+  .bottom-logo {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 66px;
     padding-top: 64px;
     font-size: 18px;
+    padding-bottom: 51px
+  }
+}
+
+// BBQ Page-4 //
+
+.bbq-page-background {
+  background-color: $cream;
+  margin-inline: 210px;
+  padding: 87px 30px;
+  margin-top: 116px;
+
+  .bbq-header-section {
+    &-title {
+      padding-bottom: 53px;
+      padding-left: 100px;
+
+      h1, h4 {
+        color: $brownish;
+      }
+
+      h1 {
+        font-size: 80px;
+        font-weight: lighter;
+      }
+
+      h4 {
+        font-size: 28px;
+        padding: 20px 0px;
+      }
+
+      h6 {
+        font-size: 24px;
+      }
+    }
+
+    .header-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .header-column {
+        flex: 1;
+
+        .header-card {
+          display: flex;
+          flex-direction: column;
+
+          .header-card-img {
+            background-image: url("../images/header-image.png");
+            min-height: 310px;
+            width: 350px;
+            background-repeat: no-repeat;
+
+            .header-bottom-cards {
+              padding: 120px 24px 0px 24px !important;
+            }
+
+            .header-card-img-content {
+              padding: 174px 24px 0px 24px;
+
+              .img-card-text {
+                color: white;
+
+                p {
+                  font-size: 13px;
+                }
+
+                h2 {
+                  font-size: 45px;
+                }
+              }
+
+              .img-card-input {
+                text-align: right;
+
+                input {
+                  width: 48px;
+                  height: 48px;
+                }
+              }
+
+            }
+
+          }
+
+          .header-card-content {
+            max-width: 350px;
+
+            .pricing-content {
+              display: flex;
+              align-items: center;
+              gap: 32px;
+              padding: 37px 0px 23px 0px;
+
+              .pricing {
+                font-size: 40px;
+                color: black;
+              }
+            }
+
+            .bottom-content {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              margin-bottom: 24px;
+
+              .content-icon {
+                width: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bbq-inner-note {
+    padding-top: 56px;
+    padding-bottom: 80px;
+
+    .note {
+      max-width: 557px;
+      border: 1px solid $brownish;
+      margin: auto;
+
+      p {
+        text-align: center;
+        padding: 28px;
+        font-size: 18px;
+
+        span {
+          color: $maroon;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+
+  .side-spacing {
+    padding-inline: 130px;
+
+    .bbq-quantity-section {
+      padding-top: 140px;
+
+      .bbq-quantity-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .bbq-quantity-column {
+          flex: 46%;
+
+          .bbq-quantity-upper-content {
+            p {
+              padding-top: 10px;
+            }
+
+            .quantity-counter-container {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              padding-top: 29px;
+
+              .quantity-counter {
+                width: 159px;
+                background: white;
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+                gap: 40px;
+                font-size: 22px;
+
+                button {
+                  all: unset;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+
+          .bbq-quantity-lower-content {
+            padding-top: 54px;
+
+            .quantity-select-form {
+              display: flex;
+              gap: 22px;
+              margin-top: 14px;
+
+
+              select, input {
+                &:focus {
+                  outline: none;
+                }
+              }
+
+              select {
+                height: 60px;
+                width: 268px;
+                border: none;
+                padding-inline: 20px;
+                font-size: 20px;
+              }
+
+              input {
+                height: 60px;
+                width: 79px;
+                border: none;
+                padding-inline: 20px;
+                font-size: 20px;
+              }
+            }
+          }
+
+          .bbq-schedule {
+            position: relative;
+
+            .bbq-schedule-field {
+              margin-bottom: 17px;
+
+              img {
+                position: absolute;
+                left: 18px;
+                transform: translateY(80%);
+
+              }
+
+              input {
+                padding-left: 60px;
+                height: 60px;
+                width: 100%;
+                border: none;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bbq-details-section {
+      padding-top: 83px;
+
+      .bbq-details-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 70px;
+
+        .bbq-details-column {
+          flex: 46%;
+
+          h2 {
+            padding-bottom: 22px;
+          }
+
+          .bbq-left-details {
+            h2 {
+
+            }
+
+            form {
+              .inside-form {
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                padding-bottom: 19px;
+              }
+
+              input[type=checkbox] {
+                width: 50px;
+                height: 50px;
+              }
+
+              label {
+                font-size: 22px;
+              }
+
+              .form-details {
+                padding-top: 19px;
+
+                input {
+                  height: 60px;
+                  width: 100%;
+                  border: none;
+                  padding-inline: 20px;
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+
+          .bbq-right-details {
+            form {
+              .inside-form {
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                padding-bottom: 19px;
+                font-size: 22px;
+              }
+
+              input[type=checkbox] {
+                width: 50px;
+                height: 50px;
+              }
+
+              .right-form-detail {
+                display: flex;
+                flex-direction: column;
+                gap: 19px;
+
+                input {
+                  height: 60px;
+                  width: 100%;
+                  border: none;
+                  font-size: 20px;
+                  padding-inline: 20px;
+                }
+              }
+
+              .form-privacy-policy {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding-top: 62px;
+                font-size: 14px;
+
+                input {
+                  width: 30px;
+                  height: 30px;
+                }
+              }
+              .bbq-form-btn{
+                @include standard-btn();
+                max-width: 327px;
+                margin: 52px 0px 0px 0px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
