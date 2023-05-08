@@ -10,31 +10,31 @@
             rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Kolenboertje</title>
+    <title>Kolenboertje | Home</title>
 </head>
 <body>
-<nav>
-    <div class="navbar">
-        <div class="navbar-logo">
-            <img src="assets/images/logo.svg" alt="">
-        </div>
-        <div class="navbar-items">
-            <ul>
-                <li><a href="">BBQ workshops</a></li>
-                <li><a href="">BBQ events</a></li>
-                <li><a href="">BBQ webshop</a></li>
-                <li><a href="">Over Kolenboertje</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-        <div class="navbar-right-items">
-            <span>BBQ advies? 085 023 0273</span>
-            <div class="navbar-cart-icon">
-                <img src="assets/images/cart.svg" alt="">
-            </div>
-        </div>
-    </div>
-</nav>
+<!--<nav>-->
+<!--    <div class="navbar">-->
+<!--        <div class="navbar-logo">-->
+<!--            <img src="assets/images/logo.svg" alt="">-->
+<!--        </div>-->
+<!--        <div class="navbar-items">-->
+<!--            <ul>-->
+<!--                <li><a href="">BBQ workshops</a></li>-->
+<!--                <li><a href="">BBQ events</a></li>-->
+<!--                <li><a href="">BBQ webshop</a></li>-->
+<!--                <li><a href="">Over Kolenboertje</a></li>-->
+<!--                <li><a href="">Contact</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="navbar-right-items">-->
+<!--            <span>BBQ advies? 085 023 0273</span>-->
+<!--            <div class="navbar-cart-icon">-->
+<!--                <img src="assets/images/cart.svg" alt="">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
 <section class="page-background">
     <section class="header-section">
         <div class="header-section-title">
@@ -52,7 +52,10 @@
                                 <h2>Jan Steen</h2>
                             </div>
                             <div class="img-card-input">
-                                <input type="checkbox">
+                                <label class="checkbox-container header-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -99,8 +102,11 @@
                                 <p>BBQ WORKSHOP</p>
                                 <h2>Vermeer</h2>
                             </div>
-                            <div class="img-card-input">
-                                <input type="checkbox">
+                            <div class="img-card-input ">
+                                <label class="checkbox-container header-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -148,7 +154,10 @@
                                 <h2>Rembrandt</h2>
                             </div>
                             <div class="img-card-input">
-                                <input type="checkbox">
+                                <label class="checkbox-container header-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -198,8 +207,11 @@
                                 <p>BBQ WORKSHOP</p>
                                 <h2>Jan Steen Traditioneel</h2>
                             </div>
-                            <div class="img-card-input">
-                                <input type="checkbox">
+                            <div class="img-card-input ">
+                                <label class="checkbox-container header-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -246,8 +258,11 @@
                                 <p>BBQ WORKSHOP</p>
                                 <h2>Vermeer Traditioneel</h2>
                             </div>
-                            <div class="img-card-input">
-                                <input type="checkbox">
+                            <div class="img-card-input ">
+                                <label class="checkbox-container header-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -294,8 +309,11 @@
                                 <p>BBQ WORKSHOP</p>
                                 <h2>Kamado Xperience</h2>
                             </div>
-                            <div class="img-card-input">
-                                <input type="checkbox">
+                            <div class="img-card-input ">
+                                <label class="checkbox-container header-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -410,15 +428,24 @@
                     <div class="form">
                         <form action="">
                             <div class="inside-form">
-                                <input type="checkbox" id="time1">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="time1">
+                                    <span class="checkmark"></span>
+                                </label>
                                 <label for="time1">12.00 uur</label> <br>
                             </div>
                             <div class="inside-form">
-                                <input type="checkbox" id="time2">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="time2">
+                                    <span class="checkmark"></span>
+                                </label>
                                 <label for="time2">15.00 uur</label> <br>
                             </div>
                             <div class="inside-form">
-                                <input type="checkbox" id="time3">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="time3">
+                                    <span class="checkmark"></span>
+                                </label>
                                 <label for="time3">18.00 uur</label> <br>
                             </div>
                         </form>
@@ -437,53 +464,89 @@
                             <form action="">
                                 <div class="month-section">
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month1">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month1">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month1">Januari</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month2">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month2">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month2">Februari</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month3">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month3">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month3">Maart</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month4">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month4">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month4">April</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month5">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month5">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month5">Mei</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month6">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month6">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month6">Juni</label> <br>
                                     </div>
                                 </div>
                                 <div class="month-section">
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month7">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month7">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month7">Juli</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month8">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month8">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month8">Augustus</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month9">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month9">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month9">September</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month10">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month10">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month10">Oktober</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month11">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month11">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month11">November</label> <br>
                                     </div>
                                     <div class="inside-form">
-                                        <input type="checkbox" id="month12">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="month12">
+                                            <span class="checkmark"></span>
+                                        </label>
                                         <label for="month12">December</label> <br>
                                     </div>
                                 </div>
@@ -530,7 +593,12 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check">
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -565,7 +633,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -600,7 +671,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -635,7 +709,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -670,7 +747,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -705,7 +785,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -740,7 +823,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -775,7 +861,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -810,7 +899,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -845,7 +937,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -880,7 +975,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -915,7 +1013,10 @@
                                     <span>Wierden</span>
                                 </div>
                             </div>
-                            <div class="workshop-check"><input type="checkbox"></div>
+                            <div class="workshop-check"><label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></div>
                         </div>
                     </div>
                 </div>
@@ -929,87 +1030,87 @@
         </div>
     </section>
 </section>
-<footer>
-    <div class="footer-contact">
-        <h2>BBQ advies? 085 023 0273</h2>
-    </div>
-    <div class="footer-container">
-        <div class="footer-items">
-            <h1>Workshops</h1>
-            <ul>
-                <li><a href="">Alle workshops</a></li>
-                <li><a href="">Masterclass Jan Steen</a></li>
-                <li><a href="">Masterclass Vermeer</a></li>
-                <li><a href="">Masterclass Rembrandt</a></li>
-                <li><a href="">Business Grill</a></li>
-                <li><a href="">V-grill</a></li>
-                <li><a href="">Workshop aanvragen</a></li>
-                <li><a href="">Workshop gevolgd?</a></li>
-            </ul>
-        </div>
-        <div class="footer-items">
-            <h1>Webshop</h1>
-            <ul>
-                <li><a href="">Big Green Egg barbecues</a></li>
-                <li><a href="">Primo Grill barbecues</a></li>
-                <li><a href="">Brandwerk barbecues</a></li>
-                <li><a href="">Monolith barbecues</a></li>
-                <li><a href="">Houtskool</a></li>
-                <li><a href="">Rookhout</a></li>
-                <li><a href="">Messen</a></li>
-                <li><a href="">Acessoires</a></li>
-            </ul>
-        </div>
-        <div class="footer-items">
-            <h1>Community</h1>
-            <ul>
-                <li><a href="">Online community</a></li>
-                <li><a href="">Podcasts</a></li>
-                <li><a href="">Recepten</a></li>
-                <li><a href="">Nieuws</a></li>
-            </ul>
-        </div>
-        <div class="footer-items">
-            <h1>Service</h1>
-            <ul>
-                <li><a href="">Veelgestelde vragen</a></li>
-                <li><a href="">Garantie & retouren</a></li>
-                <li><a href="">Verzending & levertijden</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom-container">
-        <div class="footer-bottom-items">
-            <h2>Contact</h2>
-            <div>+31 85 023 0273</div>
-            <div>info@kolenboertje.nl</div>
-        </div>
-        <div class="footer-bottom-items">
-            <h2>Workshops & vergaderlocaties</h2>
-            <div style="display: flex;gap: 60px;">
-                <div>Beverdamsweg 2 <br> 7642 NZ Wierden</div>
-                <div>De Bleek 32c <br> 7468 DL Enter</div>
-            </div>
-        </div>
-        <div class="footer-bottom-items" style="padding-left: 60px">
-            <h2>Openingstijden</h2>
-            <div>Hier komen de openingstijden</div>
-        </div>
-        <div class="footer-bottom-items" style="padding-left: 30px;">
-            <h2>Volg ons op</h2>
-            <ul class="footer-social-icons">
-                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="bottom-logo">
-        <div><img src="assets/images/logo.svg" alt=""></div>
-        <div>© 2023 Kolenboertje | Algemene voorwaarden | Privacyverklaring | Reviewpolicy</div>
-    </div>
-</footer>
+<!--<footer>-->
+<!--    <div class="footer-contact">-->
+<!--        <h2>BBQ advies? 085 023 0273</h2>-->
+<!--    </div>-->
+<!--    <div class="footer-container">-->
+<!--        <div class="footer-items">-->
+<!--            <h1>Workshops</h1>-->
+<!--            <ul>-->
+<!--                <li><a href="">Alle workshops</a></li>-->
+<!--                <li><a href="">Masterclass Jan Steen</a></li>-->
+<!--                <li><a href="">Masterclass Vermeer</a></li>-->
+<!--                <li><a href="">Masterclass Rembrandt</a></li>-->
+<!--                <li><a href="">Business Grill</a></li>-->
+<!--                <li><a href="">V-grill</a></li>-->
+<!--                <li><a href="">Workshop aanvragen</a></li>-->
+<!--                <li><a href="">Workshop gevolgd?</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="footer-items">-->
+<!--            <h1>Webshop</h1>-->
+<!--            <ul>-->
+<!--                <li><a href="">Big Green Egg barbecues</a></li>-->
+<!--                <li><a href="">Primo Grill barbecues</a></li>-->
+<!--                <li><a href="">Brandwerk barbecues</a></li>-->
+<!--                <li><a href="">Monolith barbecues</a></li>-->
+<!--                <li><a href="">Houtskool</a></li>-->
+<!--                <li><a href="">Rookhout</a></li>-->
+<!--                <li><a href="">Messen</a></li>-->
+<!--                <li><a href="">Acessoires</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="footer-items">-->
+<!--            <h1>Community</h1>-->
+<!--            <ul>-->
+<!--                <li><a href="">Online community</a></li>-->
+<!--                <li><a href="">Podcasts</a></li>-->
+<!--                <li><a href="">Recepten</a></li>-->
+<!--                <li><a href="">Nieuws</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="footer-items">-->
+<!--            <h1>Service</h1>-->
+<!--            <ul>-->
+<!--                <li><a href="">Veelgestelde vragen</a></li>-->
+<!--                <li><a href="">Garantie & retouren</a></li>-->
+<!--                <li><a href="">Verzending & levertijden</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="footer-bottom-container">-->
+<!--        <div class="footer-bottom-items">-->
+<!--            <h2>Contact</h2>-->
+<!--            <div>+31 85 023 0273</div>-->
+<!--            <div>info@kolenboertje.nl</div>-->
+<!--        </div>-->
+<!--        <div class="footer-bottom-items">-->
+<!--            <h2>Workshops & vergaderlocaties</h2>-->
+<!--            <div style="display: flex;gap: 60px;">-->
+<!--                <div>Beverdamsweg 2 <br> 7642 NZ Wierden</div>-->
+<!--                <div>De Bleek 32c <br> 7468 DL Enter</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="footer-bottom-items" style="padding-left: 60px">-->
+<!--            <h2>Openingstijden</h2>-->
+<!--            <div>Hier komen de openingstijden</div>-->
+<!--        </div>-->
+<!--        <div class="footer-bottom-items" style="padding-left: 30px;">-->
+<!--            <h2>Volg ons op</h2>-->
+<!--            <ul class="footer-social-icons">-->
+<!--                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>-->
+<!--                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>-->
+<!--                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>-->
+<!--                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="bottom-logo">-->
+<!--        <div><img src="assets/images/logo.svg" alt=""></div>-->
+<!--        <div>© 2023 Kolenboertje | Algemene voorwaarden | Privacyverklaring | Reviewpolicy</div>-->
+<!--    </div>-->
+<!--</footer>-->
 <script>
     let counterDisplayElem = document.querySelector('.counter-display');
     let counterMinusElem = document.querySelector('.counter-minus');

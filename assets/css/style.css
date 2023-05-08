@@ -6,6 +6,42 @@
   font-family: "Karla-Medium";
   src: url("../../assets/fonts/Karla/Karla-Medium.ttf");
 }
+@font-face {
+  font-family: "FSRenaissance-Regular";
+  src: url("../../assets/fonts/FS.Renaissance/FSRenaissance-Regular.ttf");
+}
+input:focus-visible {
+  outline: none;
+}
+
+.checkbox-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-container input[type=checkbox] {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: 1px solid #EAEAEA;
+}
+
+.checkbox-container input[type=checkbox]:checked ~ .checkmark::before {
+  content: url("../images/tick.svg");
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -67,10 +103,13 @@ nav .navbar .navbar-right-items .navbar-cart-icon {
 }
 .page-background .header-section-title h1 {
   font-size: 80px;
+  font-family: "FSRenaissance-Regular";
 }
 .page-background .header-section-title h4 {
   font-size: 28px;
   padding: 20px 0px;
+  letter-spacing: 5.6px;
+  font-weight: lighter;
 }
 .page-background .header-section-title h6 {
   font-size: 24px;
@@ -78,6 +117,7 @@ nav .navbar .navbar-right-items .navbar-cart-icon {
 .page-background .header-section .header-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .page-background .header-section .header-container .header-column {
   flex: 1;
@@ -85,12 +125,11 @@ nav .navbar .navbar-right-items .navbar-cart-icon {
 .page-background .header-section .header-container .header-column .header-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .page-background .header-section .header-container .header-column .header-card .header-card-img {
   background-image: url("../images/header-image.png");
   min-height: 310px;
-  width: 350px;
+  max-width: 350px;
   background-repeat: no-repeat;
 }
 .page-background .header-section .header-container .header-column .header-card .header-card-img .header-bottom-cards {
@@ -110,10 +149,10 @@ nav .navbar .navbar-right-items .navbar-cart-icon {
 }
 .page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-input {
   text-align: right;
+  padding-right: 20px;
 }
-.page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-input input {
-  width: 48px;
-  height: 48px;
+.page-background .header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-input .header-checkbox {
+  padding-right: 21px;
 }
 .page-background .header-section .header-container .header-column .header-card .header-card-content {
   max-width: 350px;
@@ -174,124 +213,131 @@ nav .navbar .navbar-right-items .navbar-cart-icon {
   display: flex;
   gap: 22px;
   margin-top: 14px;
+  flex-wrap: wrap;
 }
-.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form select:focus, .page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form input:focus {
-  outline: none;
-}
-.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form select {
+.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content select {
   height: 60px;
   width: 268px;
   border: none;
   padding-inline: 20px;
   font-size: 20px;
 }
-.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content .quantity-select-form input {
+.page-background .quantity-section .quantity-container .quantity-column .quantity-right-content input {
   height: 60px;
   width: 79px;
   border: none;
   padding-inline: 20px;
   font-size: 20px;
 }
-.page-background .schedule-section {
+.page-background .quantity-section .quantity-container .quantity-column .add-allergie h2 {
+  padding-top: 15px;
+}
+
+.schedule-section {
   padding-top: 73px;
 }
-.page-background .schedule-section .schedule-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.page-background .schedule-section .schedule-container .schedule {
-  flex-basis: 35%;
-}
-.page-background .schedule-section .schedule-container .schedule .monthly-schedule, .page-background .schedule-section .schedule-container .schedule .schedule-form {
-  margin-top: 19px;
-}
-.page-background .schedule-section .schedule-container .schedule .schedule-form {
-  max-width: 338px;
-  background: white;
-  padding: 30px;
-}
-.page-background .schedule-section .schedule-container .schedule .schedule-form form {
-  margin-top: 15px;
-}
-.page-background .schedule-section .schedule-container .schedule .schedule-form form .inside-form {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  padding-bottom: 9px;
-}
-.page-background .schedule-section .schedule-container .schedule .schedule-form form input {
-  width: 50px;
-  height: 50px;
-}
-.page-background .schedule-section .schedule-container .schedule .schedule-form form label {
-  font-size: 22px;
-}
-.page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 {
-  max-width: 588px;
-}
-.page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 form {
-  display: flex;
-  gap: 137px;
-}
-.page-background .workshop-section {
-  padding-top: 103px;
-  padding-bottom: 200px;
-}
-.page-background .workshop-section .workshop-title {
-  padding-bottom: 29px;
-}
-.page-background .workshop-section .workshop-title h1 {
-  font-size: 28px;
-  letter-spacing: 5.4px;
-  color: #967F2F;
-}
-.page-background .workshop-section .workshop-title h2 {
-  font-size: 24px;
-  padding-top: 25px;
-}
-.page-background .workshop-section .workshop-container {
+.schedule-section .schedule-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-.page-background .workshop-section .workshop-container .workshop {
+.schedule-section .schedule-container .schedule {
+  flex-basis: 35%;
+}
+.schedule-section .schedule-container .schedule .monthly-schedule, .schedule-section .schedule-container .schedule .schedule-form {
+  margin-top: 19px;
+}
+.schedule-section .schedule-container .schedule .schedule-form {
+  max-width: 338px;
+  background: white;
+  padding: 30px;
+}
+.schedule-section .schedule-container .schedule .schedule-form form {
+  margin-top: 15px;
+}
+.schedule-section .schedule-container .schedule .schedule-form form .inside-form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 9px;
+}
+.schedule-section .schedule-container .schedule .schedule-form form input {
+  width: 50px;
+  height: 50px;
+}
+.schedule-section .schedule-container .schedule .schedule-form form label {
+  font-size: 22px;
+}
+.schedule-section .schedule-container .monthly-schedule .schedule-form-2 {
+  max-width: 588px;
+}
+.schedule-section .schedule-container .monthly-schedule .schedule-form-2 form {
+  display: flex;
+  gap: 137px;
+}
+
+.workshop-section {
+  padding-top: 103px;
+  padding-bottom: 200px;
+}
+.workshop-section .workshop-title {
+  padding-bottom: 29px;
+}
+.workshop-section .workshop-title h1 {
+  font-size: 28px;
+  letter-spacing: 5.4px;
+  color: #967F2F;
+}
+.workshop-section .workshop-title h2 {
+  font-size: 24px;
+  padding-top: 25px;
+}
+.workshop-section .workshop-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.workshop-section .workshop-container .workshop {
   flex-basis: 23%;
 }
-.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-date {
+.workshop-section .workshop-container .workshop .workshop-card .workshop-date {
   background: #9E1620;
   color: white;
 }
-.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-date p {
+.workshop-section .workshop-container .workshop .workshop-card .workshop-date p {
   font-size: 24px;
   padding: 10px 0px 10px 23px;
 }
-.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body {
+.workshop-section .workshop-container .workshop .workshop-card .workshop-card-body {
   background-color: white;
   padding: 10px 23px 10px 23px;
 }
-.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .main-content p {
+.workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .main-content p {
   font-size: 12px;
 }
-.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .main-content h1 {
+.workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .main-content h1 {
   font-size: 36px;
 }
-.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content {
+.workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content {
   display: flex;
   align-items: end;
   justify-content: space-between;
   padding: 21px 0px;
 }
-.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content .bottom-content-inside .bottom-content-item {
+.workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content .workshop-check {
+  padding-bottom: 20px;
+}
+.workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content .bottom-content-inside .bottom-content-item {
   display: flex;
   align-items: center;
   gap: 9px;
   padding-bottom: 10px;
 }
-.page-background .workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content input {
+.workshop-section .workshop-container .workshop .workshop-card .workshop-card-body .bottom-content input {
   width: 50px;
   height: 50px;
 }
-.page-background .workshop-section .workshop-btn a {
+.workshop-section .workshop-btn a {
   text-decoration: none;
   background: #9E1620;
   display: flex;
@@ -389,6 +435,7 @@ footer .bottom-logo {
 .bbq-page-background .bbq-header-section-title h1 {
   font-size: 80px;
   font-weight: lighter;
+  font-family: "FSRenaissance-Regular";
 }
 .bbq-page-background .bbq-header-section-title h4 {
   font-size: 28px;
@@ -418,7 +465,7 @@ footer .bottom-logo {
   padding: 120px 24px 0px 24px !important;
 }
 .bbq-page-background .bbq-header-section .header-container .header-column .header-card .header-card-img .header-card-img-content {
-  padding: 174px 24px 0px 24px;
+  padding: 135px 24px 0px 24px;
 }
 .bbq-page-background .bbq-header-section .header-container .header-column .header-card .header-card-img .header-card-img-content .img-card-text {
   color: white;
@@ -519,6 +566,7 @@ footer .bottom-logo {
   display: flex;
   gap: 22px;
   margin-top: 14px;
+  flex-wrap: wrap;
 }
 .bbq-page-background .side-spacing .bbq-quantity-section .bbq-quantity-container .bbq-quantity-column .bbq-quantity-lower-content .quantity-select-form select:focus, .bbq-page-background .side-spacing .bbq-quantity-section .bbq-quantity-container .bbq-quantity-column .bbq-quantity-lower-content .quantity-select-form input:focus {
   outline: none;
@@ -644,6 +692,312 @@ footer .bottom-logo {
   color: white;
   text-align: right;
   margin: 80px 0 0 auto;
+}
+
+.checkout-page-background {
+  margin: 116px 210px 158px 210px;
+  background-color: #F8F7F2;
+  padding: 87px 130px 93px 130px;
+}
+.checkout-page-background .checkout-header-section .checkout-header-title h1 {
+  font-size: 80px;
+  color: #967F2F;
+  font-family: "FSRenaissance-Regular";
+}
+.checkout-page-background .checkout-header-section .checkout-header-title h4 {
+  font-size: 28px;
+  color: #967F2F;
+  letter-spacing: 5.6px;
+  padding-top: 38px;
+  font-weight: lighter;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 28px;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column {
+  flex-basis: 45%;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column p {
+  color: #70706F;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .workshop-name {
+  padding-top: 18px;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .workshop-name h2 {
+  font-size: 22px;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .workshop-name h3 {
+  font-size: 14px;
+  color: #967F2F;
+  font-weight: lighter;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .workshop-schedule {
+  padding-top: 18px;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .workshop-schedule .each-schedule {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  padding-bottom: 15px;
+  font-size: 22px;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form {
+  display: flex;
+  gap: 122px;
+  align-items: self-end;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form .header-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  color: #70706F;
+}
+.checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form .header-fields input {
+  border: none;
+  height: 60px;
+  padding-inline: 15px;
+  font-size: 22px;
+}
+.checkout-page-background .checkout-credentials {
+  padding-top: 67px;
+}
+.checkout-page-background .checkout-credentials .credentials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column {
+  flex-basis: 45%;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .title {
+  font-size: 28px;
+  letter-spacing: 5.6px;
+  color: #967F2F;
+  font-weight: lighter;
+  padding-bottom: 28px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .credentials-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .credentials-fields .credentials-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .credentials-fields .credentials-checkbox input {
+  width: 50px;
+  height: 50px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .credentials-fields input {
+  height: 60px;
+  border: none;
+  padding-inline: 15px;
+  font-size: 20px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .ideal {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .ideal input[type=checkbox] {
+  width: 50px;
+  height: 50px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .select-bank form {
+  display: flex;
+  justify-content: flex-end;
+  padding: 29px 0px 42px 0px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .select-bank form select {
+  height: 60px;
+  width: 427px;
+  border: none;
+  padding-inline: 20px;
+  font-size: 20px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .term-condition div {
+  display: flex;
+  gap: 20px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .term-condition div input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .credentials-btn a {
+  text-decoration: none;
+  background: #9E1620;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 425px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 29px;
+  font-size: 18px;
+  color: white;
+  text-align: right;
+  margin: 80px 0 0 auto;
+}
+.checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .credentials-btn a {
+  max-width: 340px;
+  background-color: #1DAA69;
+  margin: 44px 0px 0px 0px;
+}
+
+@media only screen and (max-width: 1700px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 150px;
+    padding: 87px 125px;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 100px;
+    padding: 87px 100px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 80px;
+    padding: 87px 80px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 40px;
+    padding: 87px 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 15px;
+    padding: 87px 40px;
+  }
+  .page-background .header-container, .bbq-page-background .header-container, .checkout-page-background .header-container {
+    gap: 20px;
+  }
+  .page-background .header-container .header-card-img, .bbq-page-background .header-container .header-card-img, .checkout-page-background .header-container .header-card-img {
+    max-width: 310px;
+  }
+  .page-background .quantity-section, .bbq-page-background .quantity-section, .checkout-page-background .quantity-section {
+    padding-top: 40px;
+  }
+  .page-background .quantity-section .quantity-container, .bbq-page-background .quantity-section .quantity-container, .checkout-page-background .quantity-section .quantity-container {
+    gap: 40px;
+    justify-content: center;
+  }
+  .page-background .quantity-section .quantity-container .quantity-column, .bbq-page-background .quantity-section .quantity-container .quantity-column, .checkout-page-background .quantity-section .quantity-container .quantity-column {
+    max-width: 100%;
+  }
+  .page-background .quantity-section .quantity-container .quantity-column .quantity-left-content .quantity-counter-container, .bbq-page-background .quantity-section .quantity-container .quantity-column .quantity-left-content .quantity-counter-container, .checkout-page-background .quantity-section .quantity-container .quantity-column .quantity-left-content .quantity-counter-container {
+    padding-top: 40px;
+    justify-content: center;
+  }
+  .page-background .schedule-section .schedule-container, .bbq-page-background .schedule-section .schedule-container, .checkout-page-background .schedule-section .schedule-container {
+    gap: 40px;
+  }
+  .page-background .schedule-section .schedule-container .schedule, .bbq-page-background .schedule-section .schedule-container .schedule, .checkout-page-background .schedule-section .schedule-container .schedule {
+    flex-basis: 100%;
+  }
+  .page-background .schedule-section .schedule-container .schedule .schedule-form, .bbq-page-background .schedule-section .schedule-container .schedule .schedule-form, .checkout-page-background .schedule-section .schedule-container .schedule .schedule-form {
+    max-width: 100%;
+  }
+  .page-background .schedule-section .schedule-container .schedule .schedule-form form .inside-form, .bbq-page-background .schedule-section .schedule-container .schedule .schedule-form form .inside-form, .checkout-page-background .schedule-section .schedule-container .schedule .schedule-form form .inside-form {
+    gap: 25px;
+  }
+  .page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 form, .bbq-page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 form, .checkout-page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 form {
+    gap: 120px;
+    flex-wrap: wrap;
+  }
+  .page-background .workshop-section .workshop-container .workshop, .bbq-page-background .workshop-section .workshop-container .workshop, .checkout-page-background .workshop-section .workshop-container .workshop {
+    flex: 1;
+  }
+  .page-background .bbq-header-section-title, .bbq-page-background .bbq-header-section-title, .checkout-page-background .bbq-header-section-title {
+    padding: 0;
+  }
+  .page-background .bbq-header-section-title h1, .bbq-page-background .bbq-header-section-title h1, .checkout-page-background .bbq-header-section-title h1 {
+    font-size: 65px;
+  }
+  .page-background .bbq-header-section-title h4, .bbq-page-background .bbq-header-section-title h4, .checkout-page-background .bbq-header-section-title h4 {
+    letter-spacing: 5.6px;
+    font-weight: lighter;
+  }
+  .page-background .bbq-header-section-title h6, .bbq-page-background .bbq-header-section-title h6, .checkout-page-background .bbq-header-section-title h6 {
+    padding-bottom: 20px;
+  }
+  .page-background .side-spacing, .bbq-page-background .side-spacing, .checkout-page-background .side-spacing {
+    padding-inline: 50px;
+  }
+  .page-background .side-spacing .bbq-quantity-section, .bbq-page-background .side-spacing .bbq-quantity-section, .checkout-page-background .side-spacing .bbq-quantity-section {
+    padding: 0;
+  }
+  .page-background .checkout-header-section .checkout-header-title h1, .bbq-page-background .checkout-header-section .checkout-header-title h1, .checkout-page-background .checkout-header-section .checkout-header-title h1 {
+    font-size: 70px;
+  }
+  .page-background .checkout-header-section .checkout-header-container .checkout-header-column, .bbq-page-background .checkout-header-section .checkout-header-container .checkout-header-column, .checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column {
+    flex-basis: 100%;
+  }
+  .page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form, .bbq-page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form, .checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form {
+    flex-wrap: wrap;
+  }
+  .page-background .checkout-credentials .credentials-container .credentials-column, .bbq-page-background .checkout-credentials .credentials-container .credentials-column, .checkout-page-background .checkout-credentials .credentials-container .credentials-column {
+    flex-basis: 100%;
+  }
+  .page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .title, .bbq-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .title, .checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .title {
+    padding-top: 28px;
+  }
+  .page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .select-bank form, .bbq-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .select-bank form, .checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .select-bank form {
+    justify-content: left;
+  }
+  .page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .select-bank form select, .bbq-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .select-bank form select, .checkout-page-background .checkout-credentials .credentials-container .credentials-column .right-credentials .select-bank form select {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin: 0px;
+    padding: 15px;
+  }
+  .page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 form, .bbq-page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 form, .checkout-page-background .schedule-section .schedule-container .monthly-schedule .schedule-form-2 form {
+    gap: 5px;
+  }
+  .page-background .bbq-header-section .bbq-header-section-title, .bbq-page-background .bbq-header-section .bbq-header-section-title, .checkout-page-background .bbq-header-section .bbq-header-section-title {
+    text-align: center;
+  }
+  .page-background .bbq-header-section .bbq-header-section-title h1, .bbq-page-background .bbq-header-section .bbq-header-section-title h1, .checkout-page-background .bbq-header-section .bbq-header-section-title h1 {
+    font-size: 55px;
+    word-break: break-word;
+  }
+  .page-background .bbq-header-section .bbq-header-section-title h4, .bbq-page-background .bbq-header-section .bbq-header-section-title h4, .checkout-page-background .bbq-header-section .bbq-header-section-title h4 {
+    letter-spacing: 5.6px;
+    font-weight: lighter;
+  }
+  .page-background .bbq-header-section .bbq-header-section-title h6, .bbq-page-background .bbq-header-section .bbq-header-section-title h6, .checkout-page-background .bbq-header-section .bbq-header-section-title h6 {
+    padding-bottom: 20px;
+  }
+  .page-background .bbq-header-section .header-container .header-column .header-card, .bbq-page-background .bbq-header-section .header-container .header-column .header-card, .checkout-page-background .bbq-header-section .header-container .header-column .header-card {
+    align-items: center;
+  }
+  .page-background .side-spacing .bbq-quantity-section .bbq-quantity-container .bbq-quantity-column .bbq-quantity-lower-content .quantity-select-form, .bbq-page-background .side-spacing .bbq-quantity-section .bbq-quantity-container .bbq-quantity-column .bbq-quantity-lower-content .quantity-select-form, .checkout-page-background .side-spacing .bbq-quantity-section .bbq-quantity-container .bbq-quantity-column .bbq-quantity-lower-content .quantity-select-form {
+    flex-wrap: wrap;
+  }
+  .page-background .checkout-header-section .checkout-header-title, .bbq-page-background .checkout-header-section .checkout-header-title, .checkout-page-background .checkout-header-section .checkout-header-title {
+    text-align: center;
+  }
+  .page-background .checkout-header-section .checkout-header-title h1, .bbq-page-background .checkout-header-section .checkout-header-title h1, .checkout-page-background .checkout-header-section .checkout-header-title h1 {
+    font-size: 55px;
+  }
+  .page-background .checkout-header-section .checkout-header-title h4, .bbq-page-background .checkout-header-section .checkout-header-title h4, .checkout-page-background .checkout-header-section .checkout-header-title h4 {
+    letter-spacing: 4px;
+  }
+  .page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form, .bbq-page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form, .checkout-page-background .checkout-header-section .checkout-header-container .checkout-header-column .checkout-header-form {
+    flex-wrap: wrap;
+    gap: 70px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

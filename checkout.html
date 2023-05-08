@@ -1,18 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
-  <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-          rel="stylesheet"
-  />
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Kolenboertje</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Kolenboertje | Checkout</title>
 </head>
 <body>
-
+<section class="checkout-page-background">
+    <section class="checkout-header-section">
+        <div class="checkout-header-title">
+            <h1>BBQ workshop Jan Steen boeken</h1>
+            <h4>DIT IS JOUW WORKSHOP</h4>
+        </div>
+        <div class="checkout-header-container">
+            <div class="checkout-header-column">
+                <div>
+                    <p>
+                        Workshop
+                    </p>
+                    <div class="workshop-name">
+                        <h2>Workshop Jan Steen</h2>
+                        <h3>ZOMER EDITIE</h3>
+                    </div>
+                </div>
+                <div class="workshop-schedule">
+                    <div class="each-schedule">
+                        <img src="assets/images/calender.svg" alt="">
+                        <h1>16 juni 2023</h1>
+                    </div>
+                    <div class="each-schedule">
+                        <img src="assets/images/clock.svg" alt="">
+                        <h1>15.00 uur</h1>
+                    </div>
+                    <div class="each-schedule">
+                        <img src="assets/images/location.svg" alt="">
+                        <h1>Wierden</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-header-column">
+                <form class="checkout-header-form" action="">
+                    <div class="header-fields">
+                        <span>Aantal personen</span>
+                        <input type="number" style="width: 80px">
+                    </div>
+                    <div class="header-fields">
+                        <span>Bedrag incl. BTW</span>
+                        <input type="number" style="width: 159px;" placeholder="€">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="checkout-credentials">
+        <div class="credentials-container">
+            <div class="credentials-column">
+                <h1 class="title">JOUW GEGEVENS</h1>
+                <form class="credentials-fields">
+                    <div class="credentials-checkbox">
+                        <label class="checkbox-container header-checkbox">
+                            <input type="checkbox" id="checkout1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="checkout1">Bij Kolenboertje</label> <br>
+                    </div>
+                    <input type="text" placeholder="Bedrijfsnaam">
+                    <input type="text" placeholder="Naam">
+                    <input type="text" placeholder="E-mailadres">
+                    <input type="text" placeholder="Telefoon">
+                    <input type="text" placeholder="Straat">
+                    <div style="display: flex;gap: 27px;">
+                        <input type="text" placeholder="Nummer" style="width: 50%">
+                        <input type="text" placeholder="Toevoeging (optioneel)" style="width: 50%">
+                    </div>
+                    <div style="display: flex;gap: 25px;">
+                        <input type="text" placeholder="Postcode" style="width: 30%">
+                        <input type="text" placeholder="Plaats" style="width: 70%">
+                    </div>
+                </form>
+            </div>
+            <div class="credentials-column">
+                <div class="right-credentials">
+                    <h1 class="title">BETAALMETHODE</h1>
+                    <p style="padding-bottom: 36px">Kies de gewenste betaalmethode</p>
+                    <div class="ideal">
+                        <label class="checkbox-container header-checkbox">
+                            <input type="checkbox" id="checkout2">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="assets/images/ideal-logo.svg" alt="">
+                        <span>iDeal</span>
+                    </div>
+                    <div class="select-bank">
+                        <form>
+                            <select>
+                                <option value="books">Selecteer je bank</option>
+                                <option value="html">Selecteer je bank</option>
+                                <option value="css">Selecteer je bank</option>
+                                <option value="php">Selecteer je bank</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="ideal" style="padding-bottom: 27px">
+                        <label class="checkbox-container header-checkbox">
+                            <input type="checkbox" id="checkout3">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="assets/images/paypal.svg" alt="">
+                        <span>PayPal</span>
+                    </div>
+                    <div class="ideal" style="padding-bottom: 72px">
+                        <label class="checkbox-container header-checkbox">
+                            <input type="checkbox" id="checkout4">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="assets/images/visa.svg" alt="">
+                        <img src="assets/images/master.svg" alt="">
+                        <span>Creditcard</span>
+                    </div>
+                    <div class="term-condition">
+                        <div>
+                            <input type="checkbox" id="bbq-time7">
+                            <label for="bbq-time7">Ik heb de Algemene voorwaarden van de website gelezen en ga hiermee
+                                <br>
+                                akkoord en ik heb mijn bestelling en gegevens gecontroleerd</label> <br>
+                        </div>
+                    </div>
+                    <div class="credentials-btn">
+                        <a href="">
+                            <span>BESTELLEN PLAATSEN</span>
+                            <img src="assets/images/arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
 </body>
 </html>

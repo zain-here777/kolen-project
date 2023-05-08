@@ -3,7 +3,7 @@
 
 // Mixins //
 
-@mixin standard-btn{
+@mixin standard-btn {
   a {
     text-decoration: none;
     background: $maroon;
@@ -19,6 +19,45 @@
     text-align: right;
     margin: 80px 0 0 auto;
   }
+}
+
+// Global //
+
+input {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+// Custom Checkbox //
+
+
+.checkbox-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: 1px solid $chekboxBorder;
+}
+
+.checkbox-container input[type="checkbox"]:checked ~ .checkmark::before {
+  content: url("../images/tick.svg");
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
 }
 
 
@@ -99,11 +138,14 @@ nav {
 
       h1 {
         font-size: 80px;
+        font-family: $fsFont;
       }
 
       h4 {
         font-size: 28px;
         padding: 20px 0px;
+        letter-spacing: 5.6px;
+        font-weight: lighter;
       }
 
       h6 {
@@ -114,6 +156,7 @@ nav {
     .header-container {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
 
       .header-column {
         flex: 1;
@@ -121,12 +164,11 @@ nav {
         .header-card {
           display: flex;
           flex-direction: column;
-          align-items: center;
 
           .header-card-img {
             background-image: url("../images/header-image.png");
             min-height: 310px;
-            width: 350px;
+            max-width: 350px;
             background-repeat: no-repeat;
 
             .header-bottom-cards {
@@ -150,10 +192,10 @@ nav {
 
               .img-card-input {
                 text-align: right;
+                padding-right: 20px;
 
-                input {
-                  width: 48px;
-                  height: 48px;
+                .header-checkbox {
+                  padding-right: 21px;
                 }
               }
 
@@ -236,169 +278,175 @@ nav {
             display: flex;
             gap: 22px;
             margin-top: 14px;
+            flex-wrap: wrap;
 
+          }
 
-            select, input {
-              &:focus {
-                outline: none;
-              }
-            }
+          select {
+            height: 60px;
+            width: 268px;
+            border: none;
+            padding-inline: 20px;
+            font-size: 20px;
+          }
 
-            select {
-              height: 60px;
-              width: 268px;
-              border: none;
-              padding-inline: 20px;
-              font-size: 20px;
-            }
+          input {
+            height: 60px;
+            width: 79px;
+            border: none;
+            padding-inline: 20px;
+            font-size: 20px;
+          }
+        }
 
-            input {
-              height: 60px;
-              width: 79px;
-              border: none;
-              padding-inline: 20px;
-              font-size: 20px;
-            }
+        .add-allergie {
+          h2 {
+            padding-top: 15px;
           }
         }
       }
     }
   }
+}
 
-  .schedule-section {
-    padding-top: 73px;
+.schedule-section {
+  padding-top: 73px;
 
-    .schedule-container {
-      display: flex;
-      flex-wrap: wrap;
+  .schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 
-      .schedule {
-        flex-basis: 35%;
+    .schedule {
+      flex-basis: 35%;
 
-        .monthly-schedule, .schedule-form {
-          margin-top: 19px;
+      .monthly-schedule, .schedule-form {
+        margin-top: 19px;
+      }
+
+      .schedule-form {
+        max-width: 338px;
+        background: white;
+        padding: 30px;
+
+        form {
+          margin-top: 15px;
+
+          .inside-form {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding-bottom: 9px;
+          }
+
+          input {
+            width: 50px;
+            height: 50px;
+          }
+
+          label {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+    .monthly-schedule {
+      .schedule-form-2 {
+        max-width: 588px;
+
+        form {
+          display: flex;
+          gap: 137px;
+        }
+      }
+    }
+  }
+}
+
+.workshop-section {
+  padding-top: 103px;
+  padding-bottom: 200px;
+
+  .workshop-title {
+    padding-bottom: 29px;
+
+    h1 {
+      font-size: 28px;
+      letter-spacing: 5.4px;
+      color: $brownish;
+    }
+
+    h2 {
+      font-size: 24px;
+      padding-top: 25px;
+    }
+  }
+
+  .workshop-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .workshop {
+      flex-basis: 23%;
+
+      .workshop-card {
+        .workshop-date {
+          background: $maroon;
+          color: white;
+
+          p {
+            font-size: 24px;
+            padding: 10px 0px 10px 23px;
+          }
         }
 
-        .schedule-form {
-          max-width: 338px;
-          background: white;
-          padding: 30px;
+        .workshop-card-body {
+          background-color: white;
+          padding: 10px 23px 10px 23px;
 
-          form {
-            margin-top: 15px;
+          .main-content {
+            p {
+              font-size: 12px;
+            }
 
-            .inside-form {
-              display: flex;
-              align-items: center;
-              gap: 25px;
-              padding-bottom: 9px;
+            h1 {
+              font-size: 36px;
+            }
+          }
+
+          .bottom-content {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            padding: 21px 0px;
+
+            .workshop-check {
+              padding-bottom: 20px;
+            }
+
+            .bottom-content-inside {
+              .bottom-content-item {
+                display: flex;
+                align-items: center;
+                gap: 9px;
+                padding-bottom: 10px;
+              }
             }
 
             input {
               width: 50px;
               height: 50px;
             }
-
-            label {
-              font-size: 22px;
-            }
-          }
-        }
-      }
-
-      .monthly-schedule {
-        .schedule-form-2 {
-          max-width: 588px;
-
-          form {
-            display: flex;
-            gap: 137px;
           }
         }
       }
     }
   }
 
-  .workshop-section {
-    padding-top: 103px;
-    padding-bottom: 200px;
-
-    .workshop-title {
-      padding-bottom: 29px;
-
-      h1 {
-        font-size: 28px;
-        letter-spacing: 5.4px;
-        color: $brownish;
-      }
-
-      h2 {
-        font-size: 24px;
-        padding-top: 25px;
-      }
-    }
-
-    .workshop-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-
-      .workshop {
-        flex-basis: 23%;
-
-        .workshop-card {
-          .workshop-date {
-            background: $maroon;
-            color: white;
-
-            p {
-              font-size: 24px;
-              padding: 10px 0px 10px 23px;
-            }
-          }
-
-          .workshop-card-body {
-            background-color: white;
-            padding: 10px 23px 10px 23px;
-
-            .main-content {
-              p {
-                font-size: 12px;
-              }
-
-              h1 {
-                font-size: 36px;
-              }
-            }
-
-            .bottom-content {
-              display: flex;
-              align-items: end;
-              justify-content: space-between;
-              padding: 21px 0px;
-
-              .bottom-content-inside {
-                .bottom-content-item {
-                  display: flex;
-                  align-items: center;
-                  gap: 9px;
-                  padding-bottom: 10px;
-                }
-              }
-
-              input {
-                width: 50px;
-                height: 50px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .workshop-btn {
-      @include standard-btn();
-    }
+  .workshop-btn {
+    @include standard-btn();
   }
 }
 
@@ -505,6 +553,7 @@ footer {
       h1 {
         font-size: 80px;
         font-weight: lighter;
+        font-family: $fsFont;
       }
 
       h4 {
@@ -539,7 +588,7 @@ footer {
             }
 
             .header-card-img-content {
-              padding: 174px 24px 0px 24px;
+              padding: 135px 24px 0px 24px;
 
               .img-card-text {
                 color: white;
@@ -668,6 +717,7 @@ footer {
               display: flex;
               gap: 22px;
               margin-top: 14px;
+              flex-wrap: wrap;
 
 
               select, input {
@@ -812,7 +862,8 @@ footer {
                   height: 30px;
                 }
               }
-              .bbq-form-btn{
+
+              .bbq-form-btn {
                 @include standard-btn();
                 max-width: 327px;
                 margin: 52px 0px 0px 0px;
@@ -824,3 +875,454 @@ footer {
     }
   }
 }
+
+// Checkout Page //
+
+.checkout-page-background {
+  margin: 116px 210px 158px 210px;
+  background-color: $cream;
+  padding: 87px 130px 93px 130px;
+
+  .checkout-header-section {
+
+
+    .checkout-header-title {
+      h1 {
+        font-size: 80px;
+        color: $brownish;
+        font-family: $fsFont;
+      }
+
+      h4 {
+        font-size: 28px;
+        color: $brownish;
+        letter-spacing: 5.6px;
+        padding-top: 38px;
+        font-weight: lighter;
+      }
+    }
+
+    .checkout-header-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 28px;
+
+      .checkout-header-column {
+        flex-basis: 45%;
+
+        p {
+          color: $fontGray;
+        }
+
+        .workshop-name {
+          padding-top: 18px;
+
+          h2 {
+            font-size: 22px;
+          }
+
+          h3 {
+            font-size: 14px;
+            color: $brownish;
+            font-weight: lighter;
+          }
+        }
+
+        .workshop-schedule {
+          padding-top: 18px;
+
+          .each-schedule {
+            display: flex;
+            align-items: center;
+            gap: 19px;
+            padding-bottom: 15px;
+            font-size: 22px;
+          }
+        }
+
+        .checkout-header-form {
+          display: flex;
+          gap: 122px;
+          align-items: self-end;
+
+          .header-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            color: $fontGray;
+
+            input {
+              border: none;
+              height: 60px;
+              padding-inline: 15px;
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .checkout-credentials {
+    padding-top: 67px;
+
+    .credentials-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .credentials-column {
+        flex-basis: 45%;
+
+        .title {
+          font-size: 28px;
+          letter-spacing: 5.6px;
+          color: $brownish;
+          font-weight: lighter;
+          padding-bottom: 28px;
+        }
+
+        .credentials-fields {
+          display: flex;
+          flex-direction: column;
+          gap: 19px;
+
+
+          .credentials-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            input {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          input {
+            height: 60px;
+            border: none;
+            padding-inline: 15px;
+            font-size: 20px;
+          }
+        }
+
+        .right-credentials {
+          .ideal {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            input[type=checkbox] {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          .select-bank {
+            form {
+              display: flex;
+              justify-content: flex-end;
+              padding: 29px 0px 42px 0px;
+
+              select {
+                height: 60px;
+                width: 427px;
+                border: none;
+                padding-inline: 20px;
+                font-size: 20px;
+              }
+            }
+          }
+
+          .term-condition {
+            div {
+              display: flex;
+              gap: 20px;
+
+              input[type=checkbox] {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+
+          .credentials-btn {
+            @include standard-btn();
+
+            a {
+              max-width: 340px;
+              background-color: $green;
+              margin: 44px 0px 0px 0px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries //
+
+@media only screen and (max-width: 1700px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 150px;
+    padding: 87px 125px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 100px;
+    padding: 87px 100px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 80px;
+    padding: 87px 80px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 40px;
+    padding: 87px 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin-inline: 15px;
+    padding: 87px 40px;
+
+    .header-container {
+      gap: 20px;
+
+      .header-card-img {
+        max-width: 310px;
+      }
+    }
+
+    .quantity-section {
+      padding-top: 40px;
+
+      .quantity-container {
+        gap: 40px;
+        justify-content: center;
+
+        .quantity-column {
+          max-width: 100%;
+
+          .quantity-left-content {
+            .quantity-counter-container {
+              padding-top: 40px;
+              justify-content: center;
+            }
+          }
+
+        }
+
+      }
+
+
+    }
+
+    .schedule-section {
+      .schedule-container {
+        gap: 40px;
+
+        .schedule {
+          flex-basis: 100%;
+
+          .schedule-form {
+            max-width: 100%;
+
+            form {
+              .inside-form {
+                gap: 25px;
+              }
+            }
+
+          }
+        }
+
+        .monthly-schedule {
+          .schedule-form-2 {
+            form {
+              gap: 120px;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
+
+    .workshop-section {
+      .workshop-container {
+        .workshop {
+          flex: 1;
+        }
+      }
+    }
+
+    // BBQ Page Media Query //
+    .bbq-header-section-title {
+      padding: 0;
+
+      h1 {
+        font-size: 65px;
+      }
+
+      h4 {
+        letter-spacing: 5.6px;
+        font-weight: lighter;
+      }
+
+      h6 {
+        padding-bottom: 20px;
+      }
+    }
+
+    .side-spacing {
+      padding-inline: 50px;
+
+      .bbq-quantity-section {
+        padding: 0;
+      }
+    }
+
+    // Checkout Page Query //
+    .checkout-header-section {
+      .checkout-header-title {
+        h1 {
+          font-size: 70px;
+        }
+      }
+
+      .checkout-header-container {
+        .checkout-header-column {
+          flex-basis: 100%;
+
+          .checkout-header-form {
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+
+    .checkout-credentials {
+      .credentials-container {
+        .credentials-column {
+          flex-basis: 100%;
+
+          .right-credentials {
+            .title {
+              padding-top: 28px
+            }
+
+            .select-bank {
+              form {
+                justify-content: left;
+
+                select {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .page-background, .bbq-page-background, .checkout-page-background {
+    margin: 0px;
+    padding: 15px;
+
+    .schedule-section {
+      .schedule-container {
+        .monthly-schedule {
+          .schedule-form-2 {
+            form {
+              gap: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    // BBQ Page Media Query //
+    .bbq-header-section {
+      .bbq-header-section-title {
+        text-align: center;
+
+        h1 {
+          font-size: 55px;
+          word-break: break-word;
+        }
+
+        h4 {
+          letter-spacing: 5.6px;
+          font-weight: lighter;
+        }
+
+        h6 {
+          padding-bottom: 20px;
+        }
+      }
+
+      .header-container {
+        .header-column {
+          .header-card {
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .side-spacing {
+      .bbq-quantity-section {
+        .bbq-quantity-container {
+          .bbq-quantity-column {
+            .bbq-quantity-lower-content {
+              .quantity-select-form {
+                flex-wrap: wrap;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Checkout Page Query //
+    .checkout-header-section {
+      .checkout-header-title {
+        text-align: center;
+
+        h1 {
+          font-size: 55px;
+        }
+
+        h4 {
+          letter-spacing: 4px;
+        }
+      }
+
+      .checkout-header-container {
+        .checkout-header-column {
+          .checkout-header-form {
+            flex-wrap: wrap;
+            gap: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
